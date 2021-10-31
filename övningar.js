@@ -1,20 +1,14 @@
 
-// 1. tasks 
-/*
-var a = 12;
-var b = 13;
-console.log(a + b) 
-*/ 
 //alt two
-/*
+
 function addNumber(a,b){
 
     console.log(a+b)
 
 }
 
-addNumbers (12, 40)
-*/
+addNumber (12, 40);
+
 var lista = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 /* for(var i=0; i<lista.length; i+=2){
@@ -51,7 +45,7 @@ for (var i=0; i<lista.length; i++)
 
     const summa= document.querySelector (".summa")
 
-document.querySelector(".summa").textContent= calculate (140, 50) 
+document.querySelector(".summa").textContent= calculate (140, 60) 
 
 var count =  (a, b) => {
     console.log (a+ b)
@@ -59,3 +53,76 @@ var count =  (a, b) => {
 }
 
 count(10,30)
+
+//5.
+
+var username = "Kingstedt"
+function skrivaUtname() {
+    username= "Kingstedt"
+}
+
+skrivaUtname ();
+console.log(username);
+
+// 6. task for resvere namne (string)
+
+const name = "Kingstedt";
+// split ()
+let convertedName = name.split("")
+console.log(convertedName); 
+const reversedName= convertedName.reverse();
+const stringName = reversedName.join("")
+console.log(stringName);
+
+
+// git init 
+// git add .
+
+// 7.1  Remove my list 
+// 
+
+function myFunction() {
+    var list = document.getElementById("myList");
+    list.removeChild(list.childNodes[1]);
+}
+//  7.2 add
+
+const addCoffee = () => {
+
+const cappuccino = document.createElement('li')
+cappuccino.textContent = "Cappuccino"
+const coffee = document.getElementById('coffee')
+coffee.appendChild(cappuccino)
+}
+//8
+
+function reverseString(str) {
+    if (str === "")
+      return "";
+    else
+      return reverseString(str.substr(1)) + str.charAt(0);
+  }
+  reverseString("Kingstedt");
+  console.log(reverseString)
+
+//9
+function palindrome(str) {
+    var re = /[^A-Za-z0-9]/g;
+    str = str.toLowerCase(). replace(re, ''); 
+    var len = str.length; 
+    for (var i = 0; i < len/2; i++) {
+        if (str[i] !== str[len - 1 -i]) {
+            return false;
+        }
+    }
+    return true;
+}
+palindrome("Kingstedt")
+
+
+// 10
+
+function myFunction_1() {
+    let str = document.getElementById("demo").innerHTML;
+    document.getElementById("demo").innerHTML = str.replace("Havard University", "Medieinstitutet");;
+}
