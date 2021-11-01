@@ -64,7 +64,30 @@ function skrivaUtname() {
 skrivaUtname ();
 console.log(username);
 
+// alt 5.1
+
+const InputString = (text) => {
+    console.log(text)
+    return text
+}
+
+//orderHistory
+
+const countTotalShopping = (product1, product2) => {
+    return product1 + product2
+}
+
+const shoppingHistory1 = countTotalShopping(100, 400);
+const shoppingHistory2 = countTotalShopping(1000, 1400);
+const shoppingHistory3 = countTotalShopping(2000, 3000);
+console.log (shoppingHistory1 + shoppingHistory2 + shoppingHistory3);
+
+
+
+const returnedText = InputString("Kingstedt");
+
 // 6. task for resvere namne (string)
+
 
 const name = "Kingstedt";
 // split ()
@@ -74,6 +97,7 @@ const reversedName= convertedName.reverse();
 const stringName = reversedName.join("")
 console.log(stringName);
 
+// alt 6.1  
 
 // git init 
 // git add .
@@ -94,16 +118,16 @@ cappuccino.textContent = "Cappuccino"
 const coffee = document.getElementById('coffee')
 coffee.appendChild(cappuccino)
 }
+
 //8
 
-function reverseString(str) {
-    if (str === "")
-      return "";
-    else
-      return reverseString(str.substr(1)) + str.charAt(0);
+function reverseString(x) {
+    
+    return x.split("").reverse().join("");
   }
-  reverseString("Kingstedt");
-  console.log(reverseString)
+  const text = reverseString("Kingstedt");
+  console.log(text)
+  
 
 //9
 function palindrome(str) {
@@ -117,7 +141,8 @@ function palindrome(str) {
     }
     return true;
 }
-palindrome("Kingstedt")
+const returned= palindrome("Otto")
+console.log(returned)
 
 
 // 10
@@ -126,3 +151,96 @@ function myFunction_1() {
     let str = document.getElementById("demo").innerHTML;
     document.getElementById("demo").innerHTML = str.replace("Havard University", "Medieinstitutet");;
 }
+/*
+//assigns list
+
+const listItem = document.querySelector ("#list-Item").value;
+
+listItems.push(listItem);
+
+const li = document.createElement("li");
+const list = document.querySelector(".list-items")
+list.appendChild(li);
+
+listItems.map ( (e) => {
+    li.textContent = e;
+})
+*/
+//key object 
+
+const elevInfo = {
+    key: "value",
+    key: "value2"
+}
+
+console.log(elevInfo.key2)
+
+elevInfo.key3 = 'value3'
+console.log (elevInfo.key3)
+
+elevInfo.key5 = {
+    embeddObject: "value 5"
+}
+
+console.log(elevInfo.key4);
+
+elevInfo,key5 = {
+    embeddedarry: [2, 3, 4, 5, 6, 10]
+}
+
+console.log(elevInfo)
+
+const elevInformation= {
+
+
+
+    name:"Kingstedt",
+    adress: { roadname: "abc", postcode:12345},
+    shoppingList: ["something 1", "something 2"],
+    skrivaUtInfo: function skrivUt () {
+        console.log(elevInformation.name)
+        return 0;
+    } 
+    
+}
+
+console.log(elevInformation.skrivaUtInfo())
+
+
+const embeddedList = [ [100, 200, 300, 400, 500], {name2: "value"} ,["something1", "something2", "something3", "something4", { name: "value"}]] 
+
+console.log(embeddedList[2][3].name);
+console.log(embeddedList[1].name2);
+
+
+// function expression
+/*
+const doSum = () => {
+return
+(
+        1+2
+    )
+}
+
+const summa= doSum();
+console.log(summa);
+*/
+
+// copy an object
+
+let personInfo = {
+    name: "Otto",
+    adress: "seamus street"
+}
+
+let personInfo2 = {
+    shoppingList: "The person's shopping list"
+}
+
+personInfo = { ...personInfo, personInfo2}
+console.log (personInfo);
+
+//copy list / spread
+let list1= [12, 4, 5, 6, 299]
+list1 = [...list1, "nytt value"]
+console.log(list1)
